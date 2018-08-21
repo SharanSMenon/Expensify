@@ -11,28 +11,6 @@ import 'normalize.css/normalize.css';
 import './styles/styles.css';
 const store = configureStore();
 // Water bill
-store.dispatch(addExpense({
-    description:"Dell",
-    amount:179
-}))
-store.dispatch(addExpense({
-    description:"Water bill",
-    amount:5000,
-    note:"Helo"
-}))
-// Gas Bill
-store.dispatch(addExpense({
-    description:"Gas bill",
-    amount:45
-}))
-store.dispatch(addExpense({
-    description:"Macbook pro",
-    amount:1199
-}))
-store.dispatch(addExpense({
-    description:"HP",
-    amount:699
-}))
 
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);

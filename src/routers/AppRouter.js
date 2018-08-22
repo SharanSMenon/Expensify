@@ -9,11 +9,10 @@ import NotFoundPage from '../components/NotFound';
 import createStore from 'redux';
 const AppRouter = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/Expensify">
             <div>
                 <Header />
                 <Switch>
-                    <Route exact={true} path="/Expensify" render={() => (<Redirect to="/dashboard"/>)}/>
                     <Route exact={true} path="/" render={() => (<Redirect to="/dashboard"/>)}/>
                     <Route path="/dashboard" component={ExpenseDashboardPage} exact={true} />
                     <Route path="/create" component={AddExpensePage} exact={true} />

@@ -18,10 +18,10 @@ const AppRouter = () => {
         <Router history={history}>
             <div>
                 <Switch>
-                    <PublicRoute exact={true} path="/Expensify" component={LoginPage}/>
-                    <PrivateRoute path="/Expensify/dashboard" component={ExpenseDashboardPage} exact={true} />
-                    <PrivateRoute path="/Expensify/create" component={AddExpensePage} exact={true} />
-                    <PrivateRoute path="/Expensify/edit/:id" component={EditExpensePage} exact={true} />
+                    <PublicRoute exact={true} path="/" component={LoginPage}/>
+                    <PrivateRoute path="/dashboard" component={ExpenseDashboardPage} exact={true} />
+                    <PrivateRoute path="/create" component={AddExpensePage} exact={true} />
+                    <PrivateRoute path="/edit/:id" component={EditExpensePage} exact={true} />
                     <Route component={NotFoundPage} />
                 </Switch>
             </div>

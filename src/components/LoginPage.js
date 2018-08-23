@@ -8,10 +8,12 @@ export const LoginPage = ({startLogin}) => {
             <div className="box-layout__box">
                 <h1 className="box-layout__title">Expensify</h1>
                 <p>It is time to get your expenses under control</p>
-                <button className="button" onClick={startLogin}><i class="fab fa-google"></i></button>
-                {/* <button className="button" onClick={startLogin}><i class="fab fa-facebook"></i></button>
-                <button className="button" onClick={startLogin}><i class="fab fa-twitter"></i></button>
-                <button className="button" onClick={startLogin}><i class="fab fa-github"></i></button> */}
+                <button className="button" id="google" onClick={startLogin}><i className="fab fa-google"></i></button>
+                {/* {/* <button className="button" onClick={startLogin}><i class="fab fa-facebook"></i></button> */}
+                {/* <button className="button" onClick={startLogin}><i class="fab fa-twitter"></i></button> */}
+                {/* <button className="button" id="github" onClick={(e) => {
+                    startLogin(e)
+                }}><i className="fab fa-github"></i></button> */}
             </div>
         </div>
     )

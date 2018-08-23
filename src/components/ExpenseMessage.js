@@ -12,7 +12,7 @@ const ExpenseMessage = ({ expensesCount, expensesTotal }) => {
             <div className="content-container">
                 <h1 className="page-header__title">Viewing <span>{expensesCount}</span> {word} totaling <span>{formattedExpensesTotal}</span></h1>
                 <div>
-                    <Link className="button" to="/Expensify/create">Add expense</Link>
+                    <Link className="button" to="/create">Add expense</Link>
                 </div>
             </div>
         </div>

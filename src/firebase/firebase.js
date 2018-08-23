@@ -11,7 +11,8 @@ firebase.initializeApp(config);
 const database = firebase.database()
 // Add Facebook, Github and Twitter
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
-export {firebase, googleAuthProvider, database as default}
+const githubAuthProvider = new firebase.auth.GithubAuthProvider();
+export {firebase, googleAuthProvider, githubAuthProvider, database as default}
 // database.ref('expenses').on('child_removed',(snap) => {
 //     console.log(snap.key, snap.val());
 // })

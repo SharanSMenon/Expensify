@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://sharansmenon.github.io/Expensify",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "firebase": "^5.4.0",
     "gh-pages": "^1.2.0",
     "history": "^4.7.2",

@@ -1,0 +1,22 @@
+.button{
+    background: $blue;
+    color:white;
+    padding:$s-size;
+    border:none;
+    font-size:$font-size-large;
+    font-weight:300;
+    text-decoration: none;
+    display:inline-block;
+    line-height:1;
+    transition: background .3s ease;
+    margin-right:2px;
+}
+.button:hover{
+    background: darken($blue, 10%);
+}
+.button--secondary{
+    background-color:#888888;
+}
+.button--secondary:hover{
+    background: darken(#888888, 10%);
+}

@@ -1,0 +1,14 @@
+.filter-input{
+    border:1px solid #cacccd;
+    height:50px;
+    padding:$s-size;
+    font-size:$font-size-large;
+    font-weight:300;
+}
+.select {
+    @extend .filter-input;
+}
+.textarea{
+    @extend .filter-input;
+    height:10rem;
+}

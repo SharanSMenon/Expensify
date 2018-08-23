@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import AppRouter from './routers/AppRouter';
+import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
-import { addExpense } from './actions/expenses';
-import { setTextFilter } from './actions/filters';
+import { startSetExpenses } from './actions/expenses';
+import { login, logout } from './actions/auth';
 import getVisibleExpenses from './selectors/expenses';
-
+import { firebase } from './firebase/firebase'
 import 'normalize.css/normalize.css';
 import './styles/styles.css';
 const store = configureStore();
@@ -22,4 +22,26 @@ const jsx = (
         <AppRouter />
     </Provider>
 )
-ReactDOM.render(jsx, document.getElementById('root'));
+let hasRendered = false;
+const renderApp = () => {
+    if (!hasRendered) {
+        ReactDOM.render(jsx, document.getElementById('root'));
+        hasRendered = true;
+    }
+}
+ReactDOM.render(<p>Loading...</p>, document.getElementById('root'));
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+        store.dispatch(login(user.uid))
+        store.dispatch(startSetExpenses()).then(() => {
+            renderApp()
+            if (history.location.pathname === '/Expensify') {
+                history.push('/Expensify/dashboard')
+            }
+        })
+    } else {
+        store.dispatch(logout());
+        renderApp()
+        history.push('/Expensify');
+    }
+})

@@ -20,7 +20,7 @@ button {
   cursor: pointer; }
 
 .box-layout {
-  background: url("/images/bg.jpg");
+  background: url("/Expensify/images/bg.jpg");
   background-size: cover;
   display: flex;
   justify-content: center;

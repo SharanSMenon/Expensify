@@ -22,6 +22,7 @@ button {
 .box-layout {
   background: url("/images/bg.jpg");
   background-size: cover;
+  -webkit-transform: rotate(180deg);
   display: flex;
   justify-content: center;
   align-items: center;
